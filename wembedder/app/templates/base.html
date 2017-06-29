@@ -1,0 +1,51 @@
+{% extends "bootstrap/base.html" %}
+
+{% block head %}
+{{super()}}
+
+<meta name="robots" content="index, nofollow">
+
+<!-- link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='jquery.dataTables.min.css') }}" -->
+
+
+{% endblock %}
+
+{% block title %}Wembedder{% endblock %}
+
+{% block scripts %}
+{{super()}}
+
+<!-- script type="text/javascript" src="{{ url_for('static', filename='jquery.dataTables.min.js') }}"></script -->
+
+
+
+{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-static-top">
+    <ul class="nav nav-pills">
+	<li role="presentation"><a href="./">Wembedder</a></li>
+	<li role="presentation"><a href="most-similar/">Most similar</a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% block page_content %}{% endblock %}
+</div>
+
+<div class="container">
+    <hr>
+    Data from <a href="https://www.wikidata.org">Wikidata</a>.
+    |
+    Code from
+    <a href="https://github.com/fnielsen/wembedder">GitHub repository</a>
+    |
+    Hosted on   <a href="https://tools.wmflabs.org/">Wikimedia Tool Labs</a>,
+    a <a href="https://wikimediafoundation.org">Wikimedia Foundation</a> service
+    |
+    License for content: CC0 for data, CC-BY-SA for text and media.
+  </div>
+{% endblock %}
+
