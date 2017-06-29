@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+
+{% block scripts %}
+{{super()}}
+
+<script type="text/javascript">
+
+  {% if q %}
+  $(document).ready(function() {
+    console.log( "Calling API" );  
+    $.getJSON("../api/most-similar/{{ q }}", {},
+    function(data) {
+      console.log( "Setting result list" );  
+      $("#resultlist").empty();
+      $.each(data.most_similar, function(i, item) {
+        $("#resultlist").append("<li><a href='" + item.item + "'>" + item.item + "</a> " + item.similarity + "</li>");
+      });
+    });
+  });
+  {% endif %}
+  
+$('#searchterm').keyup(function( e ) {
+  var q = $('#searchterm').val();
+  $.getJSON("https://www.wikidata.org/w/api.php?callback=?", {
+      search: q,
+      action: "wbsearchentities",
+      language: "{{ language }}",
+      uselang: "{{ language }}",
+      format: "json",
+      strictlanguage: true,
+    },
+    function(data) {
+      $("#searchresult").empty();
+      $.each(data.search, function(i, item) {
+        $("#searchresult").append("<div><a href='" + item.title + "'>" + item.label + "</a> - " + item.description + "</div>");
+    });
+  });
+});
+</script>
+
+{% endblock %}
+
+
+{% block page_content %}
+
+<form>
+  <input type="text" id="searchterm"/>
+  <input type="submit"/>
+  <div id="searchresult"></div>
+</form>
+
+<div id="results">
+  <ol id="resultlist">
+  </ol>
+</div>
+
+
+{% endblock %}
+
+
+
+
