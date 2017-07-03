@@ -47,6 +47,13 @@ q_pattern = '<regex("Q[1-9]\d*"):q>'
 Q_PATTERN = re.compile(r'Q[1-9]\d*')
 
 
+def sanitize_language(language):
+    if language in  ('da', 'de', 'es', 'fr', 'jp', 'nl', 'no', 'ru', 'sv', 'zh'):
+        return language
+    return 'en'
+
+
+
 @main.route("/")
 def index():
     """Return rendered index page.
@@ -63,7 +70,7 @@ def index():
 @main.route('/most-similar/' + q_pattern)
 @main.route('/most-similar/')
 def show_most_similiar(q=None):
-    language = 'da'
+    language =  sanitize_language(request.args.get('language'))
     return render_template('most-similar.html', q=q, language=language)
 
 
