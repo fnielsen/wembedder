@@ -5,38 +5,70 @@
 {{super()}}
 
 <script type="text/javascript">
+    var logoUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/20px-Wikidata-logo.svg.png";
 
   {% if q %}
   $(document).ready(function() {
-    console.log( "Calling API" );  
-    $.getJSON("../api/most-similar/{{ q }}", {},
-    function(data) {
-      console.log( "Setting result list" );  
-      $("#resultlist").empty();
-      $.each(data.most_similar, function(i, item) {
-        $("#resultlist").append("<li><a href='" + item.item + "'>" + item.item + "</a> " + item.similarity + "</li>");
-      });
-    });
+      // console.log( "Calling API" );  
+      $.getJSON("../api/most-similar/{{ q }}", {},
+		function(data) {
+		    // console.log( "Setting result list" );  
+		    $("#resultlist").empty();
+		    $.each(data.most_similar, function(i, item) {
+			var id = 'result' + i;
+			var listed_q = item.item
+			var html = "<tr>";
+			html += "<td>" + item.similarity.toFixed(4) + "</td>";
+			html += "<td><a href='https://www.wikidata.org/wiki/" + listed_q + "'><img src='" + logoUrl + "'></a></td>\n";
+			// console.log(html)
+			html += "<td><a href='" + listed_q + "'><span id='" + id +"'>" + item.item + "</span></a></td>\n";
+			html += "</tr>";
+			// console.log(html);
+			$("#resulttable").append(html);
+			$.getJSON("https://www.wikidata.org/w/api.php?callback=?", {
+			    action: "wbgetentities",
+			    ids: listed_q,
+			    language: "{{ language }}",
+			    uselang: "{{ language }}",
+			    format: "json",
+			    strictlanguage: true,
+			},function (data) {
+			    // console.log(listed_q);
+			    // console.log(id);
+			    if (listed_q in data.entities) {
+				label = entity_to_label(data.entities[item.item],
+							language="{{ language }}");
+				// console.log(label);
+				$('#' + id).empty();
+				$('#' + id).text(label);
+			    }
+			});
+		    });
+		});
   });
   {% endif %}
-  
-$('#searchterm').keyup(function( e ) {
-  var q = $('#searchterm').val();
-  $.getJSON("https://www.wikidata.org/w/api.php?callback=?", {
-      search: q,
-      action: "wbsearchentities",
-      language: "{{ language }}",
-      uselang: "{{ language }}",
-      format: "json",
-      strictlanguage: true,
-    },
-    function(data) {
-      $("#searchresult").empty();
-      $.each(data.search, function(i, item) {
-        $("#searchresult").append("<div><a href='" + item.title + "'>" + item.label + "</a> - " + item.description + "</div>");
-    });
+
+
+  $('#searchterm').keyup(function( e ) {
+      var q = $('#searchterm').val();
+      $.getJSON(
+	  "https://www.wikidata.org/w/api.php?callback=?",
+	  {
+	      search: q,
+	      action: "wbsearchentities",
+	      language: "{{ language }}",
+	      uselang: "{{ language }}",
+	      format: "json",
+	      strictlanguage: true,
+	  },
+	  function(data) {
+	      $("#searchresult").empty();
+	      $.each(data.search, function(i, item) {
+		  var html = "<div><a href='" + item.title + "'>" + item.label + "</a> - " + item.description + "</div>";
+		  $("#searchresult").append(html);
+	      });
+	  });
   });
-});
 </script>
 
 {% endblock %}
@@ -47,12 +79,26 @@ $('#searchterm').keyup(function( e ) {
 <form>
   <input type="text" id="searchterm"/>
   <input type="submit"/>
+  <select name="language">
+    <option value="en">English</option>
+    <option value="da">Dansk</option>
+    <option value="de">Deutsch</option>
+    <option value="es">Spanish</option>
+    <option value="fr">French</option>
+    <option value="jp">Japanese</option>
+    <option value="nl">Dutch</option>
+    <option value="no">Norsk</option>
+    <option value="ru">Russian</option>
+    <option value="sv">Svensk</option>
+    <option value="zh">zh-Chinese</option>
+  </select> (language doesn't work yet) 
   <div id="searchresult"></div>
 </form>
 
+<h2>Results</h2>
+
 <div id="results">
-  <ol id="resultlist">
-  </ol>
+  <table id="resulttable"></table>
 </div>
 
 
