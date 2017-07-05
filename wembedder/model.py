@@ -28,13 +28,13 @@ class Model(Word2Vec):
 
         subdirectory = subdirectories[0]
         filename = split(subdirectory)[-1]
-        
-        try: 
+
+        try:
             model = super(Model, cls).load(join(subdirectory, filename))
             model.metadata = {
                 'filename': filename
             }
-        except FileNotFoundError:
+        except OSError:
             model = Model()
             model.metadata = {
                 'error': 'File not found: {}'.format(filename)
