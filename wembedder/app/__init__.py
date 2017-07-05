@@ -6,7 +6,7 @@ from __future__ import absolute_import, division, print_function
 from flask import Flask
 from flask_bootstrap import Bootstrap, StaticCDN
 
-from ..model import Model, MODEL_FILENAME
+from ..model import Model
 
 
 def create_app():
@@ -26,7 +26,7 @@ def create_app():
     Bootstrap(app)
 
     app.extensions['bootstrap']['cdns']['bootstrap'] = StaticCDN()
-    
+
     from .views import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
