@@ -17,3 +17,16 @@ function entity_to_label(entity, language='en') {
     return entity['id']
 }
 
+
+function hash_to_language() {
+    var hash = window.location.hash;
+    var regex = /language=(da|de|en|es|fr|jp|nl|no|ru|sv|zh)/g;
+    var match = regex.exec(hash);
+    if (match) {
+	language = match[1];
+    }
+    else {
+	language = 'en';
+    }
+    return language;
+}
