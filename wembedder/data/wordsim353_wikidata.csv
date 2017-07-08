@@ -1,0 +1,354 @@
+,word1,word2,human,q1,q2,label1,label2
+0,love,sex,6.77,Q316,Q5873,love,sexual intercourse
+1,tiger,cat,7.35,Q19939,Q146,tiger,cat
+2,tiger,tiger,10.0,Q19939,Q19939,tiger,tiger
+3,book,paper,7.46,Q571,Q11472,book,paper
+4,computer,keyboard,7.62,Q68,Q1921606,computer,keyboard
+5,computer,internet,7.58,Q68,Q75,computer,Internet
+6,plane,car,5.77,Q17285,Q1144312,plane,car
+7,train,car,6.31,Q870,Q1144312,train,car
+8,telephone,communication,7.5,Q11035,Q11024,telephone,communication
+9,television,radio,6.77,Q289,Q159391,television,radio receiver
+10,media,radio,7.42,,Q159391,,radio receiver
+11,drug,abuse,6.85,Q8386,Q600571,drug,abuse
+12,bread,butter,6.19,Q7802,Q34172,bread,butter
+13,cucumber,potato,5.92,Q23425,Q16587531,Cucumis sativus,potato
+14,doctor,nurse,7.0,Q39631,Q186360,physician,nurse
+15,professor,doctor,6.62,Q121594,Q39631,professor,physician
+16,student,professor,6.81,Q48282,Q121594,student,professor
+17,smart,student,4.62,,Q48282,,student
+18,smart,stupid,5.81,,Q795,,stupidity
+19,company,stock,7.08,Q4830453,Q1196314,business enterprise,stock
+20,stock,market,8.08,Q1196314,Q37654,stock,market
+21,stock,phone,1.62,Q1196314,Q11035,stock,telephone
+22,stock,CD,1.31,Q1196314,Q34467,stock,compact disc
+23,stock,jaguar,0.92,Q1196314,Q35694,stock,jaguar
+24,stock,egg,1.81,Q1196314,Q17147,stock,egg
+25,fertility,egg,6.69,Q964401,Q17147,fertility,egg
+26,stock,live,3.73,Q1196314,,stock,
+27,stock,life,0.92,Q1196314,Q3,stock,life
+28,book,library,7.46,Q571,Q7075,book,library
+29,bank,money,8.12,Q22687,Q1368,bank,money
+30,wood,forest,7.73,Q287,Q4421,wood,forest
+31,money,cash,9.15,Q1368,Q693464,money,cash
+32,professor,cucumber,0.31,Q121594,Q23425,professor,Cucumis sativus
+33,king,cabbage,0.23,Q12097,Q35051,king,cabbage
+34,king,queen,8.58,Q12097,Q19643,king,queen regnant
+35,king,rook,5.92,Q12097,Q25386,king,rook
+36,bishop,rabbi,6.69,Q29182,Q133485,bishop,rabbi
+37,Jerusalem,Israel,8.46,Q1218,Q801,Jerusalem,Israel
+38,Jerusalem,Palestinian,7.65,Q1218,Q201190,Jerusalem,Palestinian people
+39,holy,sex,1.62,,Q5873,,sexual intercourse
+40,fuck,sex,9.44,,Q5873,,sexual intercourse
+41,Maradona,football,8.62,Q17515,Q2736,Diego Maradona,association football
+42,football,soccer,9.03,Q2736,Q2736,association football,association
+43,football,basketball,6.81,Q2736,Q5372,association football,basketball
+44,football,tennis,6.63,Q2736,Q847,association football,tennis
+45,tennis,racket,7.56,Q847,Q240502,tennis,racket
+46,Arafat,peace,6.73,Q34211,Q454,Yasser Arafat,peace
+47,Arafat,terror,7.65,Q34211,Q13648784,Yasser Arafat,terror
+48,Arafat,Jackson,2.5,Q34211,,Yasser Arafat,
+49,law,lawyer,8.38,Q7748,Q40348,law,lawyer
+50,movie,star,7.38,Q11424,Q523,film,star
+51,movie,popcorn,6.19,Q11424,Q165112,film,popcorn
+52,movie,critic,6.73,Q11424,Q6430706,film,critic
+53,movie,theater,7.92,Q11424,Q11635,film,theater
+54,physics,proton,8.12,Q413,Q2294,physics,proton
+55,physics,chemistry,7.35,Q413,Q2329,physics,chemistry
+56,space,chemistry,4.88,Q107,Q2329,space,chemistry
+57,alcohol,chemistry,5.54,Q156,Q2329,alcohol,chemistry
+58,vodka,gin,8.46,Q214970,Q959362,vodka,gin
+59,vodka,brandy,8.13,Q214970,Q146470,vodka,brandy
+60,drink,car,3.04,Q40050,Q1144312,drink,car
+61,drink,ear,1.31,Q40050,Q7362,drink,ear
+62,drink,mouth,5.96,Q40050,Q9635,drink,mouth
+63,drink,eat,6.87,Q40050,,drink,
+64,baby,mother,7.85,Q998,Q7560,baby,mother
+65,drink,mother,2.65,Q40050,Q7560,drink,mother
+66,car,automobile,8.94,Q1144312,Q1420,car,automobile
+67,gem,jewel,8.96,Q83437,Q83437,gemstone,gemstone
+68,journey,voyage,9.29,Q61509,,travel,
+69,boy,lad,8.83,Q3010,Q3010,boy,boy
+70,coast,shore,9.1,Q93352,Q468756,coast,bank
+71,asylum,madhouse,8.87,,,,
+72,magician,wizard,9.02,Q2488257,Q2488257,magician,magician
+73,midday,noon,9.29,Q168182,Q168182,noon,noon
+74,furnace,stove,8.79,Q1709184,Q203789,furnace,stove
+75,food,fruit,7.52,Q2095,Q3314483,food,fruit
+76,bird,cock,7.1,Q5113,Q2216236,bird,rooster
+77,bird,crane,7.38,Q5113,Q25365,bird,Crane
+78,tool,implement,6.46,Q39546,Q1183543,tool,device
+79,brother,monk,6.27,Q10861465,Q733786,brother,monk
+80,crane,implement,2.69,Q25365,Q1183543,Crane,device
+81,lad,brother,4.46,Q3010,Q10861465,boy,brother
+82,journey,car,5.85,Q61509,Q1144312,travel,car
+83,monk,oracle,5.0,Q733786,Q217123,monk,oracle
+84,cemetery,woodland,2.08,Q39614,Q3241565,cemetery,woodland
+85,food,rooster,4.42,Q2095,Q2216236,food,rooster
+86,coast,hill,4.38,Q93352,Q54050,coast,hill
+87,forest,graveyard,1.85,Q4421,Q39614,forest,cemetery
+88,shore,woodland,3.08,Q468756,Q3241565,bank,woodland
+89,monk,slave,0.92,Q733786,Q12773225,monk,slave
+90,coast,forest,3.15,Q93352,Q4421,coast,forest
+91,lad,wizard,0.92,Q3010,Q2488257,boy,magician
+92,chord,smile,0.54,Q170439,Q487,chord,smile
+93,glass,magician,2.08,Q11469,Q2488257,glass,magician
+94,noon,string,0.54,Q168182,Q11064354,noon,string
+95,rooster,voyage,0.62,Q2216236,,rooster,
+96,money,dollar,8.42,Q1368,Q4917,money,United States dollar 
+97,money,cash,9.08,Q1368,Q693464,money,cash
+98,money,currency,9.04,Q1368,Q8142,money,currency
+99,money,wealth,8.27,Q1368,Q200535,money,wealth
+100,money,property,7.57,Q1368,Q6422240,money,property
+101,money,possession,7.29,Q1368,Q6422240,money,property
+102,money,bank,8.5,Q1368,Q22687,money,bank
+103,money,deposit,7.73,Q1368,Q5260774,money,deposit 
+104,money,withdrawal,6.88,Q1368,,money,
+105,money,laundering,5.65,Q1368,,money,
+106,money,operation,3.31,Q1368,,money,
+107,tiger,jaguar,8.0,Q19939,Q35694,tiger,jaguar
+108,tiger,feline,8.0,Q19939,Q25265,tiger,Felidae
+109,tiger,carnivore,7.08,Q19939,Q81875,tiger,carnivore
+110,tiger,mammal,6.85,Q19939,Q7377,tiger,mammal
+111,tiger,animal,7.0,Q19939,Q729,tiger,animal
+112,tiger,organism,4.77,Q19939,Q7239,tiger,organism
+113,tiger,fauna,5.62,Q19939,Q104021,tiger,fauna
+114,tiger,zoo,5.87,Q19939,Q43501,tiger,zoo
+115,psychology,psychiatry,8.08,Q9418,Q7867,psychology,psychiatry
+116,psychology,anxiety,7.0,Q9418,Q154430,psychology,anxiety
+117,psychology,fear,6.85,Q9418,Q44619,psychology,fear
+118,psychology,depression,7.42,Q9418,Q4340209,psychology,mental depression 
+119,psychology,clinic,6.58,Q9418,Q1774898,psychology,clinic
+120,psychology,doctor,6.42,Q9418,Q39631,psychology,physician
+121,psychology,Freud,8.21,Q9418,Q9215,psychology,Sigmund Freud
+122,psychology,mind,7.69,Q9418,Q450,psychology,mind
+123,psychology,health,7.23,Q9418,Q12147,psychology,health
+124,psychology,science,6.71,Q9418,Q336,psychology,science
+125,psychology,discipline,5.58,Q9418,Q1315911,psychology,discipline
+126,psychology,cognition,7.48,Q9418,Q2200417,psychology,cognition
+127,planet,star,8.45,Q634,Q523,planet,star
+128,planet,constellation,8.06,Q634,Q8928,planet,constellation
+129,planet,moon,8.08,Q634,Q405,planet,Moon
+130,planet,sun,8.02,Q634,Q525,planet,Sun
+131,planet,galaxy,8.11,Q634,Q318,planet,galaxy
+132,planet,space,7.92,Q634,Q107,planet,space
+133,planet,astronomer,7.94,Q634,Q11063,planet,astronomer
+134,precedent,example,5.85,Q665141,Q14944328,precedent,example
+135,precedent,information,3.85,Q665141,Q11028,precedent,information
+136,precedent,cognition,2.81,Q665141,Q2200417,precedent,cognition
+137,precedent,law,6.65,Q665141,Q7748,precedent,law
+138,precedent,collection,2.5,Q665141,,precedent,
+139,precedent,group,1.77,Q665141,Q16887380,precedent,group
+140,precedent,antecedent,6.04,Q665141,Q260460,precedent,antecedent
+141,cup,coffee,6.58,Q2100893,Q8486,cup,coffee
+142,cup,tableware,6.85,Q2100893,Q851782,cup,tableware
+143,cup,article,2.4,Q2100893,Q191067,cup,article
+144,cup,artifact,2.92,Q2100893,Q8205328,cup,artefact
+145,cup,object,3.69,Q2100893,Q488383,cup,object
+146,cup,entity,2.15,Q2100893,Q35120,cup,entity
+147,cup,drink,7.25,Q2100893,Q40050,cup,drink
+148,cup,food,5.0,Q2100893,Q2095,cup,food
+149,cup,substance,1.92,Q2100893,Q27166344,cup,substance
+150,cup,liquid,5.9,Q2100893,Q11435,cup,liquid
+151,jaguar,cat,7.42,Q35694,Q146,jaguar,cat
+152,jaguar,car,7.27,Q35694,Q1144312,jaguar,car
+153,energy,secretary,1.81,Q11379,Q80687,energy,secretary
+154,secretary,senate,5.06,Q80687,Q2570643,secretary,senate
+155,energy,laboratory,5.09,Q11379,Q483242,energy,laboratory
+156,computer,laboratory,6.78,Q68,Q483242,computer,laboratory
+157,weapon,secret,6.06,Q728,Q1503443,weapon,secrecy
+158,FBI,fingerprint,6.94,Q8333,Q178022,Federal Bureau of Investigation,fingerprint
+159,FBI,investigation,8.31,Q8333,,Federal Bureau of Investigation,
+160,investigation,effort,4.59,,Q16515196,,effort
+161,Mars,water,2.94,Q111,Q283,Mars,water
+162,Mars,scientist,5.63,Q111,Q901,Mars,scientist
+163,news,report,8.16,Q38926,Q10870555,news,report
+164,canyon,landscape,7.53,Q150784,Q107425,canyon,landscape
+165,image,surface,4.56,Q478798,Q484298,image,surface
+166,discovery,space,6.34,Q753297,Q107,discovery,space
+167,water,seepage,6.56,Q283,,water,
+168,sign,recess,2.38,Q3695082,Q176274,sign,recess
+169,Wednesday,news,2.22,Q128,Q38926,Wednesday,news
+170,mile,kilometer,8.66,Q253276,Q828224,mile,kilometre
+171,computer,news,4.47,Q68,Q38926,computer,news
+172,territory,surface,5.34,Q183366,Q484298,territory,surface
+173,atmosphere,landscape,3.69,Q8104,Q107425,atmosphere,landscape
+174,president,medal,3.0,Q30461,Q131647,president,medal
+175,war,troops,8.13,Q198,Q1080137,war,troop
+176,record,number,6.31,,Q11563,,number
+177,skin,eye,6.22,Q1074,Q7364,skin,eye
+178,Japanese,American,6.5,Q161652,Q846570,Japanese people,Americans
+179,theater,history,3.91,Q11635,Q309,theater,history
+180,volunteer,motto,2.56,Q30224364,Q42470,volunteer,motto
+181,prejudice,recognition,3.0,Q179742,Q7302601,prejudice,recognition
+182,decoration,valor,5.63,Q6149036,Q17037955,decoration,valor
+183,century,year,7.59,Q578,Q577,century,year
+184,century,nation,3.16,Q578,Q6266,century,country
+185,delay,racism,1.19,Q21075709,Q8461,delay,racism
+186,delay,news,3.31,Q21075709,Q38926,delay,news
+187,minister,party,6.63,Q83307,Q7278,minister,political party
+188,peace,plan,4.75,Q454,Q1371819,peace,plan
+189,minority,peace,3.69,Q30103,Q454,minority group,peace
+190,attempt,peace,4.25,Q16886387,Q454,attempt,peace
+191,government,crisis,6.56,Q7188,Q381072,government,crisis
+192,deployment,departure,4.25,,Q21171241,,departure
+193,deployment,withdrawal,5.88,,,,
+194,energy,crisis,5.94,Q11379,Q381072,energy,crisis
+195,announcement,news,7.56,Q567303,Q38926,announcement,news
+196,announcement,effort,2.75,Q567303,Q16515196,announcement,effort
+197,stroke,hospital,7.03,Q12202,Q16917,cerebrovascular disease,hospital
+198,disability,death,5.47,Q12131,Q4,disability,death
+199,victim,emergency,6.47,Q1851760,Q5070802,victim,emergency
+200,treatment,recovery,7.91,Q26256310,,treatment,
+201,journal,association,4.97,Q49850,Q48204,journal,association
+202,doctor,personnel,5.0,Q39631,,physician,
+203,doctor,liability,5.19,Q39631,Q546972,physician,liability
+204,liability,insurance,7.03,Q546972,Q43183,liability,insurance
+205,school,center,3.44,Q3914,Q23595,school,centre
+206,reason,hypertension,2.31,Q178354,Q41861,reason,hypertension
+207,reason,criterion,5.91,Q178354,Q1789452,reason,criterion
+208,hundred,percent,7.38,Q37413,Q11229,100,percentage
+209,Harvard,Yale,8.13,Q13371,Q49112,Harvard University,Yale University
+210,hospital,infrastructure,4.63,Q16917,Q121359,hospital,infrastructure
+211,death,row,5.25,Q4,,death,
+212,death,inmate,5.03,Q4,Q1862087,death,prisoner
+213,lawyer,evidence,6.69,Q40348,Q1347572,lawyer,evidence
+214,life,death,7.88,Q3,Q4,life,death
+215,life,term,4.5,Q3,Q1969448,life,term
+216,word,similarity,4.75,Q8171,,word,
+217,board,recommendation,4.47,,,,
+218,governor,interview,3.25,Q132050,Q178651,governor,interview
+219,OPEC,country,5.63,Q7795,Q6256,OPEC,country
+220,peace,atmosphere,3.69,Q454,Q8104,peace,atmosphere
+221,peace,insurance,2.94,Q454,Q43183,peace,insurance
+222,territory,kilometer,5.28,Q183366,Q828224,territory,kilometre
+223,travel,activity,5.0,Q61509,Q1914636,travel,activity
+224,competition,price,6.44,Q476300,Q160151,competition,price
+225,consumer,confidence,4.13,Q22855,Q4116378,consumer,confidence
+226,consumer,energy,4.75,Q22855,Q11379,consumer,energy
+227,problem,airport,2.38,Q621184,Q1248784,problem,airport
+228,car,flight,4.94,Q1144312,Q206021,car,flight
+229,credit,card,8.06,Q182076,,credit,
+230,credit,information,5.31,Q182076,Q11028,credit,information
+231,hotel,reservation,8.03,Q27686,,hotel,
+232,grocery,money,5.94,,Q1368,,money
+233,registration,arrangement,6.0,Q2399307,,registration,
+234,arrangement,accommodation,5.41,,,,
+235,month,hotel,1.81,Q5151,Q27686,month,hotel
+236,type,kind,8.97,Q21146257,,type,
+237,arrival,hotel,6.0,,Q27686,,hotel
+238,bed,closet,6.72,Q42177,Q1723368,bed,closet
+239,closet,clothes,8.0,Q1723368,Q11460,closet,clothing
+240,situation,conclusion,4.81,Q2141565,,situation,
+241,situation,isolation,3.88,Q2141565,,situation,
+242,impartiality,interest,5.16,Q3149193,Q170924,impartiality,interest
+243,direction,combination,2.25,Q2151613,Q202805,direction,combination
+244,street,place,6.44,Q79007,Q2221906,street,geographical point
+245,street,avenue,8.88,Q79007,Q207934,street,avenue
+246,street,block,6.88,Q79007,,street,
+247,street,children,4.94,Q79007,Q7569,street,child
+248,listing,proximity,2.56,,Q19267375,,nearness
+249,listing,category,6.38,,,,
+250,cell,phone,7.81,Q7868,Q11035,cell,telephone
+251,production,hike,1.75,Q739302,Q12014035,production,hiking
+252,benchmark,index,4.25,,Q2303886,,index
+253,media,trading,3.88,,Q601401,,trade
+254,media,gain,2.88,,,,
+255,dividend,payment,7.63,Q181201,Q1148747,dividend,payment
+256,dividend,calculation,6.48,Q181201,Q622821,dividend,calculation
+257,calculation,computation,8.44,Q622821,Q12525525,calculation,computation
+258,currency,market,7.5,Q8142,Q37654,currency,market
+259,OPEC,oil,8.59,Q7795,Q42962,OPEC,oil
+260,oil,stock,6.34,Q42962,Q1196314,oil,stock
+261,announcement,production,3.38,Q567303,Q739302,announcement,production
+262,announcement,warning,6.0,Q567303,Q1759104,announcement,warning
+263,profit,warning,3.88,Q26911,Q1759104,profit,warning
+264,profit,loss,7.63,Q26911,Q1121708,profit,failure
+265,dollar,yen,7.78,Q4917,Q8146,United States dollar ,Japanese yen
+266,dollar,buck,9.22,Q4917,,United States dollar ,
+267,dollar,profit,7.38,Q4917,Q26911,United States dollar ,profit
+268,dollar,loss,6.09,Q4917,Q1121708,United States dollar ,failure
+269,computer,software,8.5,Q68,Q7397,computer,software
+270,network,hardware,8.31,,Q3966,,computer hardware
+271,phone,equipment,7.13,Q11035,Q16798631,telephone,equipment
+272,equipment,maker,5.91,Q16798631,,equipment,
+273,luxury,car,6.47,Q10953913,Q1144312,luxury,car
+274,five,month,3.38,Q203,Q5151,5,month
+275,report,gain,3.63,Q10870555,,report,
+276,investor,earning,7.13,Q557880,,investor,
+277,liquid,water,7.89,Q11435,Q283,liquid,water
+278,baseball,season,5.97,Q5369,Q24384,baseball,season
+279,game,victory,7.03,Q11410,Q50000,game,victory
+280,game,team,7.69,Q11410,Q327245,game,team
+281,marathon,sprint,7.47,Q40244,Q624482,marathon,sprint
+282,game,series,6.19,Q11410,,game,
+283,game,defeat,6.97,Q11410,Q14631121,game,defeat
+284,seven,series,3.56,Q23350,,7,
+285,seafood,sea,7.47,Q192935,Q165,seafond,sea
+286,seafood,food,8.34,Q192935,Q2095,seafond,food
+287,seafood,lobster,8.7,Q192935,Q1038113,seafond,Nephropidae
+288,lobster,food,7.81,Q1038113,Q2095,Nephropidae,food
+289,lobster,wine,5.7,Q1038113,Q282,Nephropidae,wine
+290,food,preparation,6.22,Q2095,Q19833559,food,preparation
+291,video,archive,6.34,Q34508,Q166118,video,archive
+292,start,year,4.06,,Q577,,year
+293,start,match,4.47,,Q13406554,,sport competition
+294,game,round,5.97,Q11410,,game,
+295,boxing,round,7.61,Q32112,,boxing,
+296,championship,tournament,8.36,Q1079023,Q500834,championship,tournament
+297,fighting,defeating,7.41,Q650711,,combat,
+298,line,insurance,2.69,Q37105,Q43183,line,insurance
+299,day,summer,3.94,Q573,Q1313,day,summer
+300,summer,drought,7.16,Q1313,Q43059,summer,drought
+301,summer,nature,5.63,Q1313,Q7860,summer,nature
+302,day,dawn,7.53,Q573,Q11326182,day,dawn
+303,nature,environment,8.31,Q7860,Q2249676,nature,environment
+304,environment,ecology,8.81,Q2249676,Q7150,environment,ecology
+305,nature,man,6.25,Q7860,Q8441,nature,man
+306,man,woman,8.3,Q8441,Q467,man,woman
+307,man,governor,5.25,Q8441,Q132050,man,governor
+308,murder,manslaughter,8.53,Q132821,Q3882220,murder,manslaughter
+309,soap,opera,7.94,Q34396,Q1344,soap,opera
+310,opera,performance,6.88,Q1344,Q35140,opera,performance
+311,life,lesson,5.94,Q3,Q379833,life,lesson
+312,focus,life,4.06,Q190909,Q3,focus ,life
+313,production,crew,6.25,Q739302,Q345844,production,crew
+314,television,film,7.72,Q289,Q11424,television,film
+315,lover,quarrel,6.19,Q16937917,Q16546845,lover,quarreling
+316,viewer,serial,2.97,,Q15709880,,serial
+317,possibility,girl,1.94,Q21170479,Q3031,possibility,girl
+318,population,development,3.75,Q2625603,Q26132748,population,development
+319,morality,importance,3.31,Q48324,Q16886469,morality,importance
+320,morality,marriage,3.69,Q48324,Q8445,morality,marriage
+321,Mexico,Brazil,7.44,Q96,Q155,Mexico,Brazil
+322,gender,equality,6.41,Q48277,Q773009,gender ,equality
+323,change,attitude,5.44,Q1150070,Q622645,change,attitude
+324,family,planning,6.25,Q8436,Q309100,family,planning
+325,opera,industry,2.63,Q1344,Q8148,opera,industry
+326,sugar,approach,0.88,Q11002,Q27231134,sugar,approach
+327,practice,institution,3.19,Q334600,Q178706,practice,institution
+328,ministry,culture,4.69,Q192350,Q11042,ministry,culture
+329,problem,challenge,6.75,Q621184,Q21075823,problem,challenge
+330,size,prominence,5.31,Q2091629,,magnitude,
+331,country,citizen,7.31,Q6256,Q1020994,country,citizen
+332,planet,people,5.75,Q634,Q2472587,planet,people
+333,development,issue,3.97,Q26132748,,development,
+334,experience,music,3.47,Q164359,Q638,experience,music
+335,music,project,3.63,Q638,Q170584,music,project
+336,glass,metal,5.56,Q11469,Q11426,glass,metal
+337,aluminum,metal,7.83,Q663,Q11426,aluminum,metal
+338,chance,credibility,3.88,Q3851114,Q1530061,chance,credibility
+339,exhibit,memorabilia,5.31,Q11985689,Q212469,exhibit,souvenir
+340,concert,virtuoso,6.81,Q182832,Q214970,concert,virtuoso
+341,rock,jazz,7.59,Q8063,Q8341,rock,jazz
+342,museum,theater,7.19,Q33506,Q11635,museum,theater
+343,observation,architecture,4.38,Q193181,Q12271,observation,architecture
+344,space,world,6.53,Q107,Q16502,space,world
+345,preservation,world,6.19,,Q16502,,world
+346,admission,ticket,7.69,,Q1142227,,fare
+347,shower,thunderstorm,6.31,Q7863,Q2857578,shower,thunderstorm
+348,shower,flood,6.03,Q7863,Q8068,shower,flood
+349,weather,forecast,8.34,Q11663,Q748250,weather,prediction
+350,disaster,area,6.25,Q3839081,Q11500,disaster,area
+351,governor,office,6.34,Q132050,Q182060,governor,office
+352,architecture,century,3.78,Q12271,Q578,architecture,century
