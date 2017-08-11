@@ -25,6 +25,8 @@ def create_app():
 
     Bootstrap(app)
 
+    # Serve assets locally for privacy reasons
+    app.extensions['bootstrap']['cdns']['jquery'] = StaticCDN()
     app.extensions['bootstrap']['cdns']['bootstrap'] = StaticCDN()
 
     from .views import main as main_blueprint
