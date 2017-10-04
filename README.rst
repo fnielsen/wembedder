@@ -19,3 +19,7 @@ Wembedder wikidata-20170613-truthy-BETA-cbow-size=100-window=1-min_count=20-iter
   Wikidata embedding Gensim CBOW trained on truthy dump with a 100-dimensional subspace, a window of 1 and a minimum count of 20. Trained with 25 iterations. https://zenodo.org/record/827339
 
 The models need to be unpacked under `~/wembedder_data/models/`.
+
+Reference
+---------
+Finn Årup Nielsen, Wembedder: Wikidata entity embedding web service, http://www2.imm.dtu.dk/pubdb/views/edoc_download.php/7011/pdf/imm7011.pdf
