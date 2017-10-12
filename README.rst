@@ -30,4 +30,4 @@ The canonical webservice runs from Wikimedia Toolforge at https://tools.wmflabs.
 
 Reference
 ---------
-Finn Årup Nielsen, Wembedder: Wikidata entity embedding web service, http://www2.imm.dtu.dk/pubdb/views/edoc_download.php/7011/pdf/imm7011.pdf
+Finn Årup Nielsen, Wembedder: Wikidata entity embedding web service, `arXiv:1710.04099 <https://arxiv.org/abs/1710.04099>`_, http://www2.imm.dtu.dk/pubdb/views/edoc_download.php/7011/pdf/imm7011.pdf
