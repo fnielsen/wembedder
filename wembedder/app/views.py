@@ -102,8 +102,10 @@ def api_most_similar(q):
     try:
         most_similar = current_app.model.most_similar(q)
     except KeyError:
+        # Error with out-of-vocabulary query
         message = {
             'status': 404,
+            'q': q,
             'message': 'Not found: ' + q
         }
         response = jsonify(message)
