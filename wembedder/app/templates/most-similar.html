@@ -25,11 +25,14 @@
 	      $('#search-term').val(label);
 	  }
       });
-      
+
+      // Call API to get most similar results as JSON
       $.getJSON("../api/most-similar/" + q, {},
 		function(data) {
-		    // console.log( "Setting result list" );  
-		    $("#resultlist").empty();
+		    // console.log( "Clear result list" );  
+		    $("#resulttable").empty();
+		    $("#message").empty();
+		    
 		    $.each(data.most_similar, function(i, item) {
 			var id = 'result' + i;
 			var listed_q = item.item
@@ -61,6 +64,17 @@
 			    }
 			});
 		    });
+		}).error(function(data) {
+		    $("#resulttable").empty();
+		    $("#message").empty();
+		    console.log(data);
+		    
+		    if (data.status == 404) {
+			console.log("Not found " + data.responseJSON.q);
+			$("#message").text(data.responseJSON.q + " is out-of-vocabulary");
+			return;
+		    }
+		    
 		});
   }
 
@@ -142,6 +156,8 @@
 
 
 <h2>Results</h2>
+
+<div id="message"></div>
 
 <div id="results">
   <table id="resulttable"></table>
