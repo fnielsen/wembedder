@@ -2,18 +2,21 @@
 
 
 from os import listdir
-from os.path import expanduser, isdir, join, split
+from os.path import isdir, join, split
 
 from gensim.models import Word2Vec
 
-
-MODELS_DIRECTORY = join(expanduser('~'), 'wembedder_data', 'models')
+from .config import get_configuration
 
 
 class Model(Word2Vec):
 
     @classmethod
-    def load(cls, models_directory=MODELS_DIRECTORY):
+    def load(cls, models_directory=None):
+        configuration = get_configuration()
+        if models_directory is None:
+            models_directory = configuration.get('model', 'models_directory')
+
         subdirectories = [
             join(models_directory, subdirectory)
             for subdirectory in listdir(models_directory)
@@ -26,7 +29,12 @@ class Model(Word2Vec):
             }
             return model
 
-        subdirectory = subdirectories[0]
+        default_model = configuration.get('model', 'default_model')
+        if not default_model:
+            subdirectory = subdirectories[0]
+        else:
+            subdirectory = join(models_directory, default_model)
+
         filename = split(subdirectory)[-1]
 
         try:
