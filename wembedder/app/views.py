@@ -135,7 +135,7 @@ def api_most_similar(q):
 
 @main.route('/api/similarity/' + q1_pattern + '/' + q2_pattern)
 def api_similarity(q1, q2):
-    """Return JSON for most similar.
+    """Return JSON for similarity.
 
     Parameters
     ----------
@@ -172,6 +172,49 @@ def api_similarity(q1, q2):
 
     data = {
         'similarity': similarity,
+        'model_metadata': current_app.model.metadata
+    }
+    response = jsonify(data)
+    return response
+
+
+@main.route('/api/vector/' + q_pattern)
+def api_vector(q):
+    """Return JSON for raw vector.
+
+    Parameters
+    ----------
+    q : str
+        Wikidata item identifier.
+
+    Returns
+    -------
+    response : str.
+        String with JSON. The word vector is a list in the 'vector' field.
+
+    """
+    try:
+        vector = current_app.model.wv.word_vec(q)
+    except KeyError:
+        message = {
+            'status': 404,
+            'message': 'Not found: ' + q
+        }
+        response = jsonify(message)
+        response.status_code = 404
+        return response
+    except:
+        # Ups!
+        message = {
+            'status': 500,
+            'message': 'Unhandled error'
+        }
+        response = jsonify(message)
+        response.status_code = 500
+        return response
+
+    data = {
+        'vector': vector.tolist(),
         'model_metadata': current_app.model.metadata
     }
     response = jsonify(data)
