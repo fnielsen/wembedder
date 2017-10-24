@@ -19,7 +19,7 @@ except ImportError:
 
 import logging
 
-from os.path import exists, expanduser
+from os.path import exists, expanduser, join
 
 
 CONFIGURATION_FILENAMES = [
@@ -27,10 +27,17 @@ CONFIGURATION_FILENAMES = [
     '~/etc/wembedder.cfg',
     '~/wembedder.cfg']
 
+MODELS_DIRECTORY = join(expanduser('~'), 'wembedder_data', 'models')
+
 DEFAULTS = """
 [requests]
 user_agent = wembedder
-"""
+
+[model]
+default_model =
+models_directory = {models_directory}
+
+""".format(models_directory=MODELS_DIRECTORY)
 
 
 logger = logging.getLogger(__name__)
