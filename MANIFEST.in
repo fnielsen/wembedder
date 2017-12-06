@@ -1,0 +1,2 @@
+include versioneer.py
+include wembedder/_version.py
