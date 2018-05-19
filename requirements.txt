@@ -1,3 +1,4 @@
 gensim
 flask
 Flask-Bootstrap
+flask-cors

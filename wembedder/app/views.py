@@ -1,5 +1,7 @@
 """Views for app."""
 
+from functools import wraps
+
 import re
 
 from flask import (
@@ -34,6 +36,32 @@ def add_app_url_map_converter(self, func, name=None):
         state.app.url_map.converters[name or func.__name__] = func
 
     self.record_once(register_converter)
+
+
+def jsonp(func):
+    """Wrap JSONified output for JSONP requests.
+
+    Parameters
+    ----------
+    func : function
+        Function to be decorated.
+
+    References
+    ----------
+    http://flask.pocoo.org/snippets/79/
+
+    """
+    @wraps(func)
+    def decorated_function(*args, **kwargs):
+        callback = request.args.get('callback', False)
+        if callback:
+            data = str(func(*args, **kwargs).data)
+            content = str(callback) + '(' + data + ')'
+            mimetype = 'application/javascript'
+            return current_app.response_class(content, mimetype=mimetype)
+        else:
+            return func(*args, **kwargs)
+    return decorated_function
 
 
 Blueprint.add_app_url_map_converter = add_app_url_map_converter
@@ -75,6 +103,7 @@ def show_most_similiar(q=None):
 
 
 @main.route('/api/most-similar/' + q_pattern)
+@jsonp
 def api_most_similar(q):
     """Return JSON for most similar.
 

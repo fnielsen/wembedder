@@ -5,6 +5,7 @@ from __future__ import absolute_import, division, print_function
 
 from flask import Flask
 from flask_bootstrap import Bootstrap, StaticCDN
+from flask_cors import CORS
 
 from ..model import Model
 
@@ -24,6 +25,7 @@ def create_app():
     app.model = Model.load()
 
     Bootstrap(app)
+    CORS(app)
 
     # Serve assets locally for privacy reasons
     app.extensions['bootstrap']['cdns']['jquery'] = StaticCDN()
