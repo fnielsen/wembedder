@@ -5,7 +5,7 @@ function entity_to_label(entity, language='en') {
     }
 
     // Fallback
-    languages = ['en', 'da', 'de', 'es', 'fr', 'jp',
+    languages = ['en', 'bn', 'da', 'de', 'es', 'fr', 'jp',
 		 'nl', 'no', 'ru', 'sv', 'zh'];
     for (lang in languages) {
 	if (lang in entity['labels']) {
@@ -20,7 +20,7 @@ function entity_to_label(entity, language='en') {
 
 function hash_to_language() {
     var hash = window.location.hash;
-    var regex = /language=(da|de|en|es|fr|jp|nl|no|ru|sv|zh)/g;
+    var regex = /language=(da|bn|de|en|es|fr|jp|nl|no|ru|sv|zh)/g;
     var match = regex.exec(hash);
     if (match) {
 	language = match[1];

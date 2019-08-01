@@ -76,7 +76,7 @@ Q_PATTERN = re.compile(r'Q[1-9]\d*')
 
 
 def sanitize_language(language):
-    if language in ('da', 'de', 'es', 'fr', 'jp', 'nl', 'no',
+    if language in ('da', 'bn', 'de', 'es', 'fr', 'jp', 'nl', 'no',
                     'ru', 'sv', 'zh'):
         return language
     return 'en'
