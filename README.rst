@@ -11,8 +11,8 @@ When the server is running and the model is loaded the webservice should appear 
 
 Note you will need to download model(s) from Zenodo for the webservice to start.
 
-Models
-------
+Pre-trained models
+------------------
 Wembedder currently works with specially trained Gensim models. 
 Pretrained models are published on Zenodo:
 
