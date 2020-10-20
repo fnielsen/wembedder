@@ -69,9 +69,9 @@ main = Blueprint('app', __name__)
 main.add_app_url_map_converter(RegexConverter, 'regex')
 
 # Wikidata item identifier matcher
-q_pattern = '<regex("Q[1-9]\d*"):q>'
-q1_pattern = '<regex("Q[1-9]\d*"):q1>'
-q2_pattern = '<regex("Q[1-9]\d*"):q2>'
+q_pattern = r'<regex("Q[1-9]\d*"):q>'
+q1_pattern = r'<regex("Q[1-9]\d*"):q1>'
+q2_pattern = r'<regex("Q[1-9]\d*"):q2>'
 Q_PATTERN = re.compile(r'Q[1-9]\d*')
 
 
@@ -93,6 +93,19 @@ def index():
 
     """
     return render_template('index.html')
+
+
+@main.route("/about")
+def about():
+    """Return rendered about page.
+
+    Returns
+    -------
+    html : str
+        Rederende HTML for about page.
+
+    """
+    return render_template('about.html')
 
 
 @main.route('/most-similar/' + q_pattern)
@@ -170,7 +183,7 @@ def api_similarity(q1, q2):
     ----------
     q1 : str
         Wikidata item identifier.
-    q1 : str
+    q2 : str
         Wikidata item identifier.
 
     Returns
@@ -180,7 +193,9 @@ def api_similarity(q1, q2):
 
     """
     try:
-        similarity = current_app.model.similarity(q1, q2)
+        # float is due to "TypeError: Object of type float32 is not JSON
+        # serializable" 
+        similarity = float(current_app.model.similarity(q1, q2))
     except KeyError:
         message = {
             'status': 404,
@@ -189,11 +204,11 @@ def api_similarity(q1, q2):
         response = jsonify(message)
         response.status_code = 404
         return response
-    except:
+    except Exception as error:
         # Ups!
         message = {
             'status': 500,
-            'message': 'Unhandled error'
+            'message': 'Unhandled error: {}'.format(str(error))
         }
         response = jsonify(message)
         response.status_code = 500
@@ -232,11 +247,11 @@ def api_vector(q):
         response = jsonify(message)
         response.status_code = 404
         return response
-    except:
+    except Exception as error:
         # Ups!
         message = {
             'status': 500,
-            'message': 'Unhandled error'
+            'message': 'Unhandled error: {}'.format(str(error))
         }
         response = jsonify(message)
         response.status_code = 500

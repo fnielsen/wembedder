@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+
+
+{% block page_content %}
+
+<h1>About Wembedder</h1>
+
+<p>
+Wembedder is a <a href="https://www.wikidata.org">Wikidata</a>
+    <a href="https://scholia.toolforge.org/topic/Q33003557">knowledge graph embedding</a> webapplication and webservice.
+    On the <a href="/most-similar/">most-similar</a> page a user can search in multiple languages for a Wikidata item and Wembedder will return a ranked list of the most similar other Wikidata items.
+</p>
+
+<p>
+    An API is available. For instance, <a href="/api/most-similar/Q18618629">/api/most-similar/Q18618629</a> will return JSON for a most-similar query on the item Q18618629 (Denny Vrandečić),
+    while <a href="/api/vector/Q18618629">/api/vector/Q18618629</a> contains the embedding vector for Q18618629 and
+    <a href="/api/similarity/Q34/Q35">/api/similarity/Q34/Q35</a> will return JSON with the numerical similarity between Q34 and Q35 Wikidata items.
+</p>
+
+<h2>Development</h2>
+
+<p>
+    Wembedder is developed under the Apache License 2.0 license at 
+    <a href="https://github.com/fnielsen/wembedder">GitHub</a>.
+    The code can be downloaded and run locally.
+    Pre-trained models are necessary.
+</p>
+
+<p>
+    Pre-trained models trained with a simplified <a href="http://www.rdf2vec.org/">RDF2vec</a> approach are available at Zenodo:
+    <ul>
+	<li>Wembedder wikidata-20170613-truthy-BETA-cbow-size=100-window=1-min_count=20<br/>
+	    Wikidata embedding Gensim CBOW trained on truthy dump with a 100-dimensional subspace, a window of 1 and a minimum count of 20.  <a href="https://zenodo.org/record/823195">https://zenodo.org/record/823195</a></li>
+
+	<li>Wembedder wikidata-20170613-truthy-BETA-cbow-size=100-window=1-min_count=20-iter=25
+	    <br/>
+	Wikidata embedding Gensim CBOW trained on truthy dump with a 100-dimensional subspace, a window of 1 and a minimum count of 20. Trained with 25 iterations. <a href="https://zenodo.org/record/827339">https://zenodo.org/record/827339</a></li>
+    </ul>
+
+    
+<h2>Citation</h2>
+
+<ul>
+    <li>Finn Årup Nielsen (2017), Wembedder: Wikidata entity embedding web service.
+	<br/>
+	[
+	<a href="https://arxiv.org/abs/1710.04099">arXiv</a>
+	|
+	<a href="https://www.wikidata.org/wiki/Q41799598">Wikidata</a>
+	|
+	<a href="https://scholia.toolforge.org/work/Q41799598">Scholia</a>
+|
+	<a href="https://arxiv.org/pdf/1710.04099">PDF</a>
+	]
+    </li>
+</ul>
+
+
+{% endblock %}
