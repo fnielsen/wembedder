@@ -8,7 +8,7 @@ Usage:
 
 from __future__ import print_function
 
-from model import Model
+from .model import Model
 
 from docopt import docopt
 
