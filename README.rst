@@ -3,7 +3,7 @@ Wembedder
 
 Embedding with Wikidata.
 
-There is a web-service available::
+There is a web application and web service available::
 
     python app.py
     
