@@ -26,7 +26,7 @@ The models need to be unpacked under `~/wembedder_data/models/`.
 
 Wikimedia Toolforge
 -------------------
-The canonical webservice runs from Wikimedia Toolforge at https://tools.wmflabs.org/wembedder/
+The canonical webservice runs from Wikimedia Toolforge at https://wembedder.toolforge.org/
 
 Reference
 ---------
