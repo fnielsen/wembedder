@@ -1,5 +1,5 @@
 gensim==3.8.1
-flask
+flask>=2.3.0
 Flask-Bootstrap
 flask-cors
 scipy<1.13.0,>=1.10.0
