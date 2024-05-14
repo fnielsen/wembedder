@@ -1,4 +1,5 @@
-gensim
+gensim==3.8.1
 flask
 Flask-Bootstrap
 flask-cors
+scipy<1.13.0
