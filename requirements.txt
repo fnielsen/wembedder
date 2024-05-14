@@ -3,3 +3,4 @@ flask
 Flask-Bootstrap
 flask-cors
 scipy<1.13.0
+numpy>=1.22.2 # not directly required, pinned by Snyk to avoid a vulnerability
