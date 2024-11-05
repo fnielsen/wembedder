@@ -2,8 +2,6 @@
 
 from functools import wraps
 
-import re
-
 from flask import (
     Blueprint, current_app, jsonify, render_template, request)
 from werkzeug.routing import BaseConverter
@@ -70,9 +68,9 @@ main.add_app_url_map_converter(RegexConverter, 'regex')
 
 # Wikidata item identifier matcher
 q_pattern = r'<regex("Q[1-9]\d*"):q>'
+p_pattern = r'<regex("P[1-9]\d*"):q>'  # Note variable is 'q'
 q1_pattern = r'<regex("Q[1-9]\d*"):q1>'
 q2_pattern = r'<regex("Q[1-9]\d*"):q2>'
-Q_PATTERN = re.compile(r'Q[1-9]\d*')
 
 
 def sanitize_language(language):
@@ -108,6 +106,7 @@ def about():
     return render_template('about.html')
 
 
+@main.route('/most-similar/' + p_pattern)
 @main.route('/most-similar/' + q_pattern)
 @main.route('/most-similar/')
 def show_most_similiar(q=None):
@@ -115,6 +114,7 @@ def show_most_similiar(q=None):
     return render_template('most-similar.html', q=q, language=language)
 
 
+@main.route('/api/most-similar/' + p_pattern)
 @main.route('/api/most-similar/' + q_pattern)
 @jsonp
 def api_most_similar(q):
@@ -194,7 +194,7 @@ def api_similarity(q1, q2):
     """
     try:
         # float is due to "TypeError: Object of type float32 is not JSON
-        # serializable" 
+        # serializable"
         similarity = float(current_app.model.similarity(q1, q2))
     except KeyError:
         message = {
@@ -222,6 +222,7 @@ def api_similarity(q1, q2):
     return response
 
 
+@main.route('/api/vector/' + p_pattern)
 @main.route('/api/vector/' + q_pattern)
 def api_vector(q):
     """Return JSON for raw vector.
